@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="blue">#388E3C</color>
+  <color name="blueLight">#4CAF50</color>
+  <color name="green">#7ED321</color>
+  <color name="orange">#E65100</color>
+  <color name="grayDark">#8698A7</color>
+  <color name="gray">#BABABA</color>
+  <color name="black">#000000</color>
+  <color name="white">#FFFFFF</color>
+
+  <color name="primary">@color/blue</color>
+  <color name="primaryAlt">@color/blueLight</color>
+
+  <color name="background">#FEFEFE</color>
+
+  <color name="text">#333333</color>
+  <color name="textSecondary">#999999</color>
+  <color name="textHint">@color/textSecondary</color>
+  <color name="textInverse">#FFFFFF</color>
+
+  <color name="divider">#1F000000</color>
+
+  <color name="statusBackground">@color/white</color>
+  <color name="statusActive">@color/green</color>
+  <color name="statusInactive">@color/gray</color>
+
+  <color name="counterNotifications">@color/orange</color>
+
+  <color name="offlineStatusBar">#33000000</color>
+</resources>

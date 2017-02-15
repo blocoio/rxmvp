@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name" translatable="false">RxMVP</string>
+
+  <!-- Common -->
+  <string name="offline">Offline</string>
+
+  <!-- Notifications -->
+  <string name="notifications">Notifications</string>
+  <string name="notifications_empty">No notifications</string>
+
+  <!-- To be organized -->
+  <string name="NaS" translatable="false"/>
+
+</resources>

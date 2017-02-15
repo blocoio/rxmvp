@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem.Selectable"
+    android:orientation="horizontal"
+    >
+  <LinearLayout
+      style="@style/ListItemContents"
+      >
+    <TextView
+        android:id="@+id/notification_item_code"
+        tools:text="P01234"
+        style="@style/ListItemTextTitle"
+        />
+    <TextView
+        android:id="@+id/notification_item_description"
+        android:textColor="@color/textSecondary"
+        tools:text="Fuel and air metering"
+        style="@style/ListItemTextPrimary"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_tiny"
+        >
+      <com.example.rxmvp.ui.common.views.VehicleStatusView
+          android:id="@+id/notification_item_vehicle_status"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_tiny"
+          />
+      <TextView
+          android:id="@+id/notification_item_vehicle_description"
+          tools:text="Mercedes Citaro 404"
+          style="@style/ListItemTextSecondary"
+          />
+    </LinearLayout>
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/notification_item_date"
+      tools:text="18:20"
+      style="@style/ListItemTextAux"
+      />
+</LinearLayout>

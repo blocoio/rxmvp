@@ -1,0 +1,203 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <attr format="reference" name="appBarBackground"/>
+  <attr format="reference" name="toolbarTitleColor"/>
+
+  <style name="BaseAppTheme" parent="Theme.AppCompat.Light">
+    <!-- Global attributes here -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary</item>
+    <item name="colorAccent">@color/primary</item>
+
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+
+    <item name="android:windowBackground">@color/background</item>
+    <item name="android:textColor">@color/text</item>
+    <item name="android:textColorHint">@color/textHint</item>
+    <item name="android:textColorPrimary">@color/primary</item>
+    <item name="android:textSize">@dimen/text_default</item>
+
+    <item name="colorControlHighlight">@color/primaryAlt</item>
+    <item name="colorControlActivated">@color/primaryAlt</item>
+
+    <item name="colorButtonNormal">@color/primary</item>
+    <item name="buttonStyle">@style/Button</item>
+    <item name="android:buttonStyle">@style/Button</item>
+
+    <item name="alertDialogTheme">@style/AlertDialog</item>
+    <item name="android:alertDialogTheme">@style/AlertDialog</item>
+
+    <item name="popupMenuStyle">@style/Widget.AppCompat.Light.PopupMenu</item>
+    <item name="android:popupMenuStyle">@style/Widget.AppCompat.Light.PopupMenu</item>
+
+    <item name="appBarBackground">@color/background</item>
+    <item name="toolbarTitleColor">@color/primary</item>
+  </style>
+
+  <style name="AppTheme" parent="BaseAppTheme">
+    <!-- Pre-21 attributes here -->
+  </style>
+
+  <style name="AppTheme.DarkActionBar">
+    <item name="appBarBackground">@color/primary</item>
+    <item name="toolbarTitleColor">@color/textInverse</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="Button" parent="Base.Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/textInverse</item>
+  </style>
+
+  <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorControlHighlight">@color/primaryAlt</item>
+    <item name="buttonStyle">@style/AlertDialogButtonStyle</item>
+    <item name="android:buttonStyle">@style/AlertDialogButtonStyle</item>
+  </style>
+
+  <style name="AlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+    <item name="android:textColor">@color/primary</item>
+  </style>
+
+  <!-- Layout -->
+
+  <style name="CoordinatorLayout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:fitsSystemWindows">true</item>
+  </style>
+
+  <style name="AppBarLayout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:background">?appBarBackground</item>
+    <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+  </style>
+
+  <style name="Toolbar">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?attr/actionBarSize</item>
+    <item name="android:contentInsetStart" tools:targetApi="lollipop">0dp</item>
+    <item name="android:contentInsetEnd" tools:targetApi="lollipop">0dp</item>
+    <item name="android:contentInsetStartWithNavigation" tools:targetApi="N">0dp</item>
+    <item name="contentInsetStart">0dp</item>
+    <item name="contentInsetEnd">0dp</item>
+    <item name="android:paddingStart">@dimen/margin_single</item>
+    <item name="android:paddingEnd">@dimen/margin_single</item>
+    <item name="theme">@style/ToolbarTheme</item>
+    <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+    <item name="android:titleTextColor" tools:targetApi="m">?toolbarTitleColor</item>
+    <item name="titleTextColor">?toolbarTitleColor</item>
+  </style>
+
+  <style name="ToolbarTheme" parent="Widget.AppCompat.ActionBar.Solid">
+    <item name="android:textColorPrimary">?toolbarTitleColor</item>
+    <item name="android:textColorSecondary">?toolbarTitleColor</item>
+    <item name="actionMenuTextColor">?toolbarTitleColor</item>
+  </style>
+
+  <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:textColor">?toolbarTitleColor</item>
+  </style>
+
+  <style name="Counter">
+    <item name="android:layout_width">20dp</item>
+    <item name="android:layout_height">20dp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:background">@drawable/circle</item>
+    <item name="android:textSize">@dimen/text_tiny</item>
+    <item name="android:textColor">@color/textInverse</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Counter.Toolbar">
+    <item name="android:layout_margin">@dimen/margin_single</item>
+    <item name="android:layout_gravity">center_vertical</item>
+  </style>
+
+  <!-- Lists -->
+
+  <style name="ListItem">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">@dimen/list_item_margin</item>
+  </style>
+
+  <style name="ListItem.Selectable">
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+  </style>
+
+  <style name="ListItemContents">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginEnd">@dimen/margin_double</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+
+  <style name="ListItemTextPrimary">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/text</item>
+    <item name="android:textSize">@dimen/list_item_text_primary</item>
+  </style>
+
+  <style name="ListItemTextTitle" parent="ListItemTextPrimary">
+    <item name="android:layout_marginBottom">-2dp</item>
+    <item name="android:textSize">@dimen/list_item_text_title</item>
+    <item name="android:lineSpacingExtra">0dp</item>
+    <item name="android:lineSpacingMultiplier">1</item>
+    <item name="android:includeFontPadding">false</item>
+  </style>
+
+  <style name="ListItemTextSecondary">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">20dp</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:textColor">@color/textSecondary</item>
+    <item name="android:textSize">@dimen/list_item_text_secondary</item>
+  </style>
+
+  <style name="ListItemTextAux">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">right</item>
+    <item name="android:textColor">@color/textSecondary</item>
+    <item name="android:textSize">@dimen/list_item_text_aux</item>
+  </style>
+
+  <!-- Common -->
+
+  <style name="EmptyLayout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_marginBottom">@dimen/margin_triple</item>
+    <item name="android:padding">@dimen/margin_double</item>
+    <item name="android:orientation">vertical</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <style name="EmptyImage">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:adjustViewBounds">true</item>
+    <item name="android:tint">@color/primary</item>
+  </style>
+
+  <style name="EmptyText">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">@dimen/margin_triple</item>
+    <item name="android:textColor">@color/primary</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+</resources>

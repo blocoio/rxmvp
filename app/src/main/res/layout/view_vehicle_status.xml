@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+  <android.support.v7.widget.AppCompatImageView
+      android:layout_width="@dimen/vehicle_status"
+      android:layout_height="@dimen/vehicle_status"
+      android:layout_gravity="center"
+      android:layout_margin="@dimen/vehicle_status_margin"
+      android:background="@drawable/circle"
+      android:contentDescription="@null"
+      android:elevation="@dimen/elevation_status"
+      app:backgroundTint="@color/statusBackground"
+      />
+  <android.support.v7.widget.AppCompatImageView
+      android:id="@+id/vehicle_status_inside"
+      android:layout_width="@dimen/vehicle_status_inside"
+      android:layout_height="@dimen/vehicle_status_inside"
+      android:layout_gravity="center"
+      android:background="@drawable/circle"
+      android:contentDescription="@null"
+      android:elevation="@dimen/elevation_status"
+      app:backgroundTint="@color/statusActive"
+      />
+</merge>

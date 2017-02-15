@@ -1,0 +1,49 @@
+import java.util.Date;
+import com.example.rxmvp.data.models.Trouble;
+
+CREATE TABLE trouble (
+  id INTEGER NOT NULL PRIMARY KEY,
+  code TEXT,
+  description TEXT,
+  startDate INTEGER AS Date,
+  read INTEGER AS Boolean DEFAULT 0,
+  vehicleId INTEGER NOT NULL,
+  FOREIGN KEY (vehicleId) REFERENCES vehicle(id)
+);
+
+insertQuery:
+INSERT INTO trouble(id, code, description, startDate, read, vehicleId)
+VALUES (?, ?, ?, ?, ?, ?);
+
+updateQuery:
+UPDATE trouble
+SET code = ?, description = ?, startDate = ?
+WHERE id = ?;
+
+readAll:
+UPDATE trouble
+SET read = 1;
+
+readByVehicleId:
+UPDATE trouble
+SET read = 1
+WHERE vehicleId = ?;
+
+deleteById:
+DELETE FROM trouble
+WHERE id IN ?;
+
+select_ids:
+SELECT id
+FROM trouble;
+
+select_all_with_vehicle:
+SELECT *
+FROM trouble
+JOIN vehicle ON trouble.vehicleId = vehicle.id
+ORDER BY trouble.startDate DESC;
+
+count_unread:
+SELECT COUNT(*)
+FROM trouble
+WHERE trouble.read = 0;

@@ -1,0 +1,34 @@
+<resources>
+  <dimen name="margin_tiny">2dp</dimen>
+  <dimen name="margin_half">4dp</dimen>
+  <dimen name="margin_single">8dp</dimen>
+  <dimen name="margin_double">16dp</dimen>
+  <dimen name="margin_triple">24dp</dimen>
+  <dimen name="margin_quad">36dp</dimen>
+
+  <dimen name="text_tiny">12sp</dimen>
+  <dimen name="text_small">14sp</dimen>
+  <dimen name="text_default">16sp</dimen>
+  <dimen name="text_large">18sp</dimen>
+  <dimen name="text_title">20sp</dimen>
+
+  <dimen name="elevation_card">2dp</dimen>
+  <dimen name="elevation_status">2dp</dimen>
+  <dimen name="elevation_app_bar">4dp</dimen>
+  <dimen name="elevation_fab">6dp</dimen>
+
+  <dimen name="fab_margin">@dimen/margin_single</dimen>
+
+  <!-- Lists -->
+  <dimen name="list_divider">1px</dimen>
+  <dimen name="list_item_margin">@dimen/margin_double</dimen>
+  <dimen name="list_item_text_title">@dimen/text_title</dimen>
+  <dimen name="list_item_text_primary">@dimen/text_default</dimen>
+  <dimen name="list_item_text_secondary">@dimen/text_small</dimen>
+  <dimen name="list_item_text_aux">@dimen/text_tiny</dimen>
+  <dimen name="list_item_counter_corners">2dp</dimen>
+
+  <dimen name="vehicle_status">14dp</dimen>
+  <dimen name="vehicle_status_margin">3dp</dimen>
+  <dimen name="vehicle_status_inside">8dp</dimen>
+</resources>

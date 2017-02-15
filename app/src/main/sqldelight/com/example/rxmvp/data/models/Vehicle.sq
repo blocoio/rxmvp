@@ -1,0 +1,24 @@
+import com.example.rxmvp.data.models.Vehicle;
+
+CREATE TABLE vehicle (
+  id INTEGER NOT NULL PRIMARY KEY,
+  description TEXT,
+  status TEXT AS Vehicle.Status
+);
+
+insertQuery:
+INSERT INTO vehicle(id, description, status)
+VALUES (?, ?, ?);
+
+updateQuery:
+UPDATE vehicle
+SET description = ?, status = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM vehicle
+WHERE id IN ?;
+
+select_ids:
+SELECT id
+FROM vehicle;
